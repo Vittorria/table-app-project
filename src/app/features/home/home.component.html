@@ -1,0 +1,155 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!--
+                <h4 class="title text-center">My Portfolio</h4>
+        -->
+        <ngb-tabset [justify]="'center'"
+                    class="nav nav-pills nav-pills-primary  nav-pills-just-icons justify-content-center tab-space"
+                    type="pills">
+          <ngb-tab>
+            <ng-template ngbTabTitle>
+              <i class="now-ui-icons design_image"></i>
+            </ng-template>
+            <ng-template ngbTabContent>
+              <div class="row">
+                <div class="col-md-10 ml-auto mr-auto">
+                  <div class="row collections">
+                    <div class="col-md-4">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/prod1.png">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/prod2.png">
+                    </div>
+                    <div class="col-md-4">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/prod3.jpg">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/prod5.png">
+                    </div>
+                    <div class="col-md-4">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/prod4.png">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/prod6.1.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>
+              <i class="now-ui-icons location_world"></i>
+            </ng-template>
+            <ng-template ngbTabContent>
+              <div class="row">
+                <div class="col-md-10 ml-auto mr-auto">
+                  <div class="row collections">
+                    <div class="col-md-6">
+                      <img (click)="open(classic, 'wide')" class="img-raised" src="assets/img/bg6.jpg">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/bg11.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/bg7.jpg">
+                      <img (click)="open(classic, 'wide')" alt="" class="img-raised" src="assets/img/bg8.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>
+              <i class="now-ui-icons sport_user-run"></i>
+            </ng-template>
+            <ng-template ngbTabContent>
+              <div class="row">
+                <div class="col-md-10 ml-auto mr-auto">
+                  <div class="row collections">
+                    <div class="col-md-6">
+                      <img alt="" class="img-raised" src="assets/img/bg3.jpg">
+                      <img alt="" class="img-raised" src="assets/img/bg8.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <img alt="" class="img-raised" src="assets/img/bg7.jpg">
+                      <img class="img-raised" src="assets/img/bg6.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section section-basic">
+  <div class="container">
+    <h3 class="title">Contact us</h3>
+    <h5 class="description text-black">
+      <i class="now-ui-icons ui-1_email-85"></i>
+      popescareni@ati.you.com
+      <br>
+      <br>
+      <i class="now-ui-icons users_circle-08"></i>
+      +790-090-233
+      <br>
+      <br>
+      <i class="now-ui-icons business_globe"></i>
+      Chisinau Moldova
+    </h5>
+
+  </div>
+</div>
+
+<ng-template #classic let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h5 class="modal-title text-center">Modal title</h5>
+    <button (click)="d('Cross click', 'wide')" class="close" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <img alt="First slide" class="d-block" src="assets/img/prod7.1.png">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img alt="Second slide" class="d-block" src="assets/img/prod7.2.png">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img alt="Third slide" class="d-block" src="assets/img/bg4.jpg">
+            <div class="carousel-caption d-none d-md-block">
+              <!--               <h6>Stilaj LOFT MODERN</h6>   -->
+            </div>
+          </ng-template>
+        </ngb-carousel>
+
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <h5 class="text-primary">2,490.00 MDL</h5>
+        </div>
+        <div class="row">
+          <h5>Size: 700x400x1900 cm</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <div class="left-side">
+      <button (click)="c('Close click')" class="btn btn-default btn-link" type="button">Never mind</button>
+    </div>
+    <div class="divider"></div>
+    <div class="right-side">
+      <button (click)="c('Close click')" class="btn btn-danger btn-link" type="button">Delete</button>
+    </div>
+  </div>
+
+</ng-template>
